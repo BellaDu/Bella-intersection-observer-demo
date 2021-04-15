@@ -1,0 +1,28 @@
+body {
+  transition: background-color 1s;
+}
+
+img {
+  display: block;
+  width: 100%;
+  /* Setting a max-width*/
+  max-width: 400px;
+  margin: 150px auto;
+  /*things will be transparent, but they are not removed from the website*/
+  opacity: 0;
+  /*make pic bigger and smaller*/
+  transform: scale(0.5);
+  /*Transition opacity and transform over 300ms-transit from steady to active class*/
+  transition: all 300ms;
+}
+
+/* 
+      When image is scrolled into view,
+      we will toggle this to make it 
+      visible and scaled to its initial size. 
+  */
+
+img.active {
+  opacity: 1;
+  transform: scale(1);
+}
